@@ -1,8 +1,6 @@
 node ("win"){
-    try{
          stage("test_stage"){
     	     checkout scm
         }
         load('report.py').send_message()
-    }
 }
