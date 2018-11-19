@@ -1,4 +1,6 @@
-         stage("test_stage"){
-    	     checkout scm
-        }
-        load('report.py').send_message()
+node("test1"){
+    stage("update"){
+	checkout scm
+    }
+    load("common_util.groovy").repost()
+}
