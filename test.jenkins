@@ -1,4 +1,4 @@
-node("test1"){
+pipeline{
     stage("update"){
 	checkout scm
     }
