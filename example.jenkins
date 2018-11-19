@@ -26,9 +26,12 @@ pipeline {
         }
         stage("DockerPush") {
           steps {
-           
+          	err 'error' 
                 echo 'DockerPush end..'
                 }
+	  catchError{
+		bat "python report.py"
+	}
  
         }
     }
